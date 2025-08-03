@@ -27,7 +27,9 @@ Top 10 features contribute: 72.46% of total importance
 Features needed for 90% predictive power: 34
 
 📁 Dataset
+
 The project combines multiple agricultural datasets:
+
 Crop Yield Data (yield.csv-https://github.com/user-attachments/files/21566437/yield.csv & [yield_df.csv]- https://github.com/user-attachments/files/21566445/yield_df.csv) - Historical crop yield records
 
 Pesticide Usage (pesticides.csv-https://github.com/user-attachments/files/21566432/pesticides.csv) - Pesticide application data
@@ -47,6 +49,7 @@ Total Records: 109,366 data points after merging
 
 🔬 Methodology
 1. Data Preprocessing
+ 
 Data Cleaning: Handled missing values using mean imputation
 
 Feature Engineering: One-hot encoding for categorical variables
@@ -56,6 +59,7 @@ Data Merging: Combined datasets on country and year keys
 Normalization: MinMaxScaler applied to scale features to 0-1 range
 
 2. Model Development
+ 
 Algorithm: Random Forest Regressor
 
 Features: 224 total features after preprocessing
@@ -73,6 +77,7 @@ Simplified Model: Created lightweight version with top 20 features
 
 📈 Feature Importance Analysis
 Top 10 Most Important Features for Crop Yield Prediction:
+
 Crop_Potatoes (25.59%) - Potato crop type
 
 Crop_Sweet potatoes (8.78%) - Sweet potato crop type
@@ -94,25 +99,26 @@ Country_India (2.77%) - Geographic factor
 Crop_Wheat (2.15%) - Wheat crop type
 
 🛠️ Technical Implementation
-Dependencies
-python
+Dependencies:
+
 pandas
 scikit-learn
 numpy
 matplotlib
 joblib
+
 Model Pipeline
-Data Loading: Import and merge multiple CSV files
+1.Data Loading: Import and merge multiple CSV files
 
-Preprocessing: Clean, encode, and scale data
+2.Preprocessing: Clean, encode, and scale data
 
-Training: RandomForestRegressor with 100 estimators
+3.Training: RandomForestRegressor with 100 estimators
 
-Evaluation: Multiple metrics and cross-validation
+4.Evaluation: Multiple metrics and cross-validation
 
-Feature Analysis: Importance ranking and selection
+5.Feature Analysis: Importance ranking and selection
 
-Model Persistence: Save trained models and scalers
+6.Model Persistence: Save trained models and scalers
 
 Key Code Components
 Data Integration: Merges 4 separate agricultural datasets
@@ -125,18 +131,19 @@ Feature Selection: Automated importance-based reduction
 
 📋 Usage
 Training the Model
-python
+
 # Load and preprocess data
 python crop_yield_prediction.py
 
 # The script will:
-# 1. Merge all datasets
-# 2. Preprocess and scale features
-# 3. Train the Random Forest model
-# 4. Evaluate performance
-# 5. Save the trained model
+ 1. Merge all datasets
+ 2. Preprocess and scale features
+ 3. Train the Random Forest model
+ 4. Evaluate performance
+ 5. Save the trained model
+
 Making Predictions
-python
+
 import joblib
 
 # Load saved components
@@ -148,6 +155,7 @@ target_scaler = joblib.load('target_scaler.pkl')
 scaled_features = feature_scaler.transform(new_data)
 scaled_prediction = model.predict(scaled_features)
 final_prediction = target_scaler.inverse_transform(scaled_prediction)
+
 📊 Model Interpretability
 Agricultural Insights
 Crop Type: Major factor determining yield potential
@@ -185,7 +193,7 @@ R² Score: 0.8805
 Use Case: Faster predictions, reduced complexity
 
 📁 File Structure
-text
+
 crop-yield-prediction/
 ├── data/
 │   ├── yield.csv
@@ -203,6 +211,7 @@ crop-yield-prediction/
 ├── src/
 │   └── crop_yield_prediction.py
 └── README.md
+
 🚀 Future Improvements
 Advanced Models: Experiment with Gradient Boosting, Neural Networks
 
