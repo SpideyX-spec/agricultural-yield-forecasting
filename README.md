@@ -1,10 +1,11 @@
-Crop Yield Prediction Model
+
+# Crop Yield Prediction Model
 A comprehensive machine learning project that predicts crop yields based on agricultural requirements including pesticide usage, rainfall, temperature, and other environmental factors.
 
-📊 Project Overview
+# 📊 Project Overview
 This project develops a predictive model for crop yields using agricultural data from multiple sources. The model achieved excellent performance with an R² score of 0.9747, explaining 97.47% of the variance in crop yield data.
 
-🎯 Key Results
+# 🎯 Key Results
 Model Performance Metrics
 Mean Absolute Error (MAE): 3,244.89 hg/ha
 
@@ -37,6 +38,8 @@ Pesticide Usage (pesticides.csv-https://github.com/user-attachments/files/215664
 Rainfall Data (rainfall.csv-https://github.com/user-attachments/files/21566435/rainfall.csv) - Annual rainfall measurements
 
 Temperature Data (temp.csv-https://github.com/user-attachments/files/21566436/temp.csv) - Average temperature records
+
+[final_merged_data (1).csv](https://github.com/user-attachments/files/21566504/final_merged_data.1.csv)
 
 Data Sources
 Countries: 212 unique countries
@@ -142,7 +145,7 @@ python crop_yield_prediction.py
  4. Evaluate performance
  5. Save the trained model
 
-Making Predictions
+# Making Predictions
 
 import joblib
 
@@ -156,7 +159,7 @@ scaled_features = feature_scaler.transform(new_data)
 scaled_prediction = model.predict(scaled_features)
 final_prediction = target_scaler.inverse_transform(scaled_prediction)
 
-📊 Model Interpretability
+# 📊 Model Interpretability
 Agricultural Insights
 Crop Type: Major factor determining yield potential
 
@@ -192,7 +195,7 @@ R² Score: 0.8805
 
 Use Case: Faster predictions, reduced complexity
 
-📁 File Structure
+# 📁 File Structure
 
 crop-yield-prediction/
 ├── data/
@@ -212,7 +215,7 @@ crop-yield-prediction/
 │   └── crop_yield_prediction.py
 └── README.md
 
-🚀 Future Improvements
+# 🚀 Future Improvements
 Advanced Models: Experiment with Gradient Boosting, Neural Networks
 
 Feature Engineering: Create interaction terms, seasonal features
